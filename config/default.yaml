@@ -1,0 +1,16 @@
+# Default configuration for data-professor
+
+source:
+  # S3 path or other URI to your data
+  path: "s3://my-bucket/path/"
+  # Format of the data: parquet, delta, csv, etc.
+  format: "parquet"
+
+spark:
+  # Spark master URL (local[*] for local execution)
+  master: "local[*]"
+
+llm:
+  provider: "huggingface"
+#  api_key: "${HUGGINGFACE_API_TOKEN}"
+  model: "google/flan-t5-small"   # or another HF model you prefer

@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "data-professor"
+version = "0.1.0"
+description = "Spark-based data profiling with LLM Q&A"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pyspark = "^3.3.0"
+pyyaml = "^6.0"
+boto3 = "^1.26.0"
+openai = "^0.27.0"
+click = "^8.1.0"
+huggingface-hub = "^0.16.4"
+transformers = "^4.34.0"
+torch = "^2.0.0"
+
+[tool.poetry.scripts]
+data-professor = "data_professor.cli:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
